@@ -1,0 +1,381 @@
+/* ================================
+   ESTILO GENERAL
+================================ */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0d0d0d;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+h1 {
+  margin: 0;
+  padding: 45px 20px 5px;
+
+  background: #0d0d0d;
+  color: #ffffff;
+
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  text-shadow: 4px 4px 0 #b6ff00;
+}
+
+.slogan {
+  margin: 0;
+  padding: 5px 20px 40px;
+
+  background: #0d0d0d;
+  color: #b6ff00;
+
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+
+/* ================================
+   BENEFICIOS
+================================ */
+
+.beneficios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  background: #b6ff00;
+  color: #0d0d0d;
+
+  padding: 17px;
+  margin-bottom: 40px;
+
+  font-weight: 900;
+  text-transform: uppercase;
+
+  box-shadow: 0 5px 0 #ffffff;
+}
+
+.beneficios span {
+  font-size: 13px;
+  padding: 8px 15px;
+}
+
+
+/* ================================
+   CATÁLOGO
+================================ */
+
+#productos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 28px;
+
+  padding: 20px 30px;
+}
+
+
+/* ================================
+   PRODUCTOS
+================================ */
+
+.producto {
+  position: relative;
+
+  background: #181818;
+
+  border: 2px solid #292929;
+
+  border-radius: 18px;
+
+  padding: 15px;
+
+  width: 240px;
+
+  box-shadow: 0 10px 0 #000000;
+
+  transition: all 0.3s ease;
+
+  overflow: hidden;
+}
+
+
+/* Línea de color superior */
+
+.producto::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background: #b6ff00;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.producto:hover {
+  transform: translateY(-12px) rotate(-1deg);
+
+  border-color: #b6ff00;
+
+  box-shadow:
+    0 18px 0 #b6ff00,
+    0 20px 35px rgba(182, 255, 0, 0.25);
+}
+
+
+/* ================================
+   IMAGEN DEL ZAPATO
+================================ */
+
+.producto img {
+  width: 100%;
+  height: 180px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  transition: transform 0.4s ease;
+}
+
+.producto:hover img {
+  transform: scale(1.08) rotate(2deg);
+}
+
+
+/* ================================
+   NOMBRE
+================================ */
+
+.producto h3 {
+  margin: 16px 0 8px;
+
+  font-size: 20px;
+
+  color: #ffffff;
+
+  text-transform: uppercase;
+}
+
+
+/* ================================
+   DESCRIPCIÓN
+================================ */
+
+.descripcion {
+  font-size: 14px;
+
+  color: #a5a5a5;
+
+  min-height: 42px;
+
+  line-height: 1.5;
+}
+
+
+/* ================================
+   PRECIO
+================================ */
+
+.precio {
+  font-size: 23px;
+
+  font-weight: 900;
+
+  color: #b6ff00;
+
+  margin: 15px 0;
+}
+
+
+/* ================================
+   BOTÓN COMPRAR
+================================ */
+
+.producto button {
+  background: #b6ff00;
+
+  border: none;
+
+  color: #0d0d0d;
+
+  padding: 12px 20px;
+
+  margin-top: 5px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+
+  transition: all 0.25s ease;
+}
+
+.producto button:hover {
+  background: #ffffff;
+
+  transform: scale(1.08);
+}
+
+
+/* ================================
+   CARRITO
+================================ */
+
+.carrito {
+  margin-top: 60px;
+  margin-bottom: 40px;
+
+  padding: 30px;
+
+  background: #181818;
+
+  border: 2px solid #b6ff00;
+
+  border-radius: 20px;
+
+  text-align: left;
+
+  display: inline-block;
+
+  min-width: 340px;
+
+  box-shadow:
+    0 0 30px rgba(182, 255, 0, 0.15);
+}
+
+.carrito h2 {
+  margin-top: 0;
+
+  color: #b6ff00;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+}
+
+
+/* ================================
+   LISTA CARRITO
+================================ */
+
+#lista-carrito {
+  padding-left: 20px;
+}
+
+#lista-carrito li {
+  margin-bottom: 10px;
+
+  color: #dddddd;
+}
+
+
+/* ================================
+   RESUMEN
+================================ */
+
+.resumen {
+  border-top: 1px solid #444;
+
+  margin-top: 18px;
+
+  padding-top: 15px;
+}
+
+.total {
+  font-size: 23px;
+
+  font-weight: 900;
+
+  color: #b6ff00;
+}
+
+
+/* ================================
+   BOTÓN VACIAR
+================================ */
+
+.vaciar {
+  background: #ff304f;
+
+  border: none;
+
+  color: white;
+
+  padding: 11px 17px;
+
+  margin-top: 10px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+.vaciar:hover {
+  background: #ff637a;
+
+  transform: scale(1.05);
+}
+
+
+/* ================================
+   BOTÓN FINALIZAR
+================================ */
+
+.finalizar {
+  background: #b6ff00;
+
+  border: none;
+
+  color: #0d0d0d;
+
+  padding: 11px 18px;
+
+  margin-top: 10px;
+
+  margin-left: 5px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-weight: 900;
+
+  transition: 0.2s;
+}
+
+.finalizar:hover {
+  background: #ffffff;
+
+  transform: scale(1.05);
+}
